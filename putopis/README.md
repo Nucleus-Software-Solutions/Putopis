@@ -1,3 +1,3 @@
 # putopis
 
-A new Flutter project.
+Putopis je aplikacija za jednostavno i efikasno organizovanje grupnih putovanja.

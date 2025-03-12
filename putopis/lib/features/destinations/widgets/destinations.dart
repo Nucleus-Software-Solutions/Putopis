@@ -11,6 +11,7 @@ class Destinations extends StatelessWidget {
       backgroundColor: AppColors.primarySurfaceColor,
       appBar: AppBar(
         backgroundColor: AppColors.secondarySurfaceColor,
+        surfaceTintColor: AppColors.secondarySurfaceColor,
         title: Text(
           'Putopis',
           style: TextStyle(
@@ -24,10 +25,25 @@ class Destinations extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Text(
-          'Destinations',
-        ),
+      body: ListView.separated(
+        padding: EdgeInsets.all(20),
+        itemCount: 11,
+        itemBuilder: (BuildContext context, int index) {
+          if (index == 0) {
+            return HighlightedDestinations();
+          }
+
+          // final i = index - 1;
+
+          return Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const SizedBox(height: 10);
+        },
       ),
     );
   }

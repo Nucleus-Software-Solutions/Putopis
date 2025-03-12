@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "883798392561",
+    "firebase_url": "https://putopis-test-project-default-rtdb.firebaseio.com",
+    "project_id": "putopis-test-project",
+    "storage_bucket": "putopis-test-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883798392561:android:be215408ac066305843350",
+        "android_client_info": {
+          "package_name": "com.example.putopis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW26-Sbu66VNFAquqr-lmP7QCiNSJwt3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

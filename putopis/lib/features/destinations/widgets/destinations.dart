@@ -17,6 +17,7 @@ class Destinations extends StatelessWidget {
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.w700,
+            color: AppColors.primaryColor,
           ),
         ),
         shape: RoundedRectangleBorder(
@@ -27,19 +28,19 @@ class Destinations extends StatelessWidget {
       ),
       body: ListView.separated(
         padding: EdgeInsets.all(20),
-        itemCount: 11,
+        itemCount: 12,
         itemBuilder: (BuildContext context, int index) {
           if (index == 0) {
             return HighlightedDestinations();
           }
 
+          if (index == 1) {
+            return DestinationsFilters();
+          }
+
           // final i = index - 1;
 
-          return Container(
-            height: 100,
-            width: 100,
-            color: Colors.red,
-          );
+          return DestinationCard();
         },
         separatorBuilder: (BuildContext context, int index) {
           return const SizedBox(height: 20);

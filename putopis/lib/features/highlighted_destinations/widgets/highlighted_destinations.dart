@@ -8,16 +8,32 @@ class HighlightedDestinations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 280,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (BuildContext context, int index) {
-          return HighlightedDestinationCard();
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return const SizedBox(width: 20);
-        },
+      height: 320,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Izdvojeno',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w700,
+              color: AppColors.primaryTextColor,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Expanded(
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return HighlightedDestinationCard();
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return const SizedBox(width: 20);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

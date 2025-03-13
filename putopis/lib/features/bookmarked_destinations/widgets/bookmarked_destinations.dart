@@ -16,6 +16,7 @@ class BookmarkedDestinations extends StatelessWidget {
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.w700,
+            color: AppColors.primaryColor,
           ),
         ),
         shape: RoundedRectangleBorder(
@@ -24,10 +25,15 @@ class BookmarkedDestinations extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Text(
-          'Bookmarked Destinations',
-        ),
+      body: ListView.separated(
+        padding: EdgeInsets.all(20),
+        itemCount: 3,
+        itemBuilder: (BuildContext context, int index) {
+          return DestinationCard();
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const SizedBox(height: 20);
+        },
       ),
     );
   }

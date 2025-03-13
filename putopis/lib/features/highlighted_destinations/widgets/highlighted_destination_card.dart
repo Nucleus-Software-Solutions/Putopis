@@ -54,14 +54,16 @@ class HighlightedDestinationCard extends StatelessWidget {
                           border: Border.all(color: AppColors.borderColor),
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 10),
                         child: Text(
                           'Maldivi',
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: AppColors.primaryTextColor,
+                            overflow: TextOverflow.ellipsis,
                           ),
+                          maxLines: 1,
                         ),
                       ),
                     ],

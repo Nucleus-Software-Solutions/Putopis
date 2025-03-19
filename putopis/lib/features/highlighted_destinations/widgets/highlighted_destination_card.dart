@@ -9,7 +9,11 @@ class HighlightedDestinationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // TODO: Push details page
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DestinationDetailsPage(),
+          ),
+        );
       },
       child: Container(
         padding: EdgeInsets.all(10),
@@ -52,24 +56,7 @@ class HighlightedDestinationCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: AppColors.secondarySurfaceColor,
-                            border: Border.all(color: AppColors.borderColor),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 35, vertical: 10),
-                          child: Text(
-                            'Maldivi',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.primaryTextColor,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            maxLines: 1,
-                          ),
-                        ),
+                        AppChip(text: 'Maldivi'),
                       ],
                     ),
                   ),

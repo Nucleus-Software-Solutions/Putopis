@@ -11,7 +11,11 @@ class DestinationCard extends StatelessWidget {
 
     return InkWell(
       onTap: () {
-        // TODO: Push details page
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DestinationDetailsPage(),
+          ),
+        );
       },
       child: Container(
         color: AppColors.secondarySurfaceColor,

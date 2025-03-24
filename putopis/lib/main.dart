@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyApp()));
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -26,11 +31,18 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
-          Text(
-            'Sadrzaj',
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 18,
+          SizedBox(
+            height: 320,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Izdvojeno'),
+                Expanded(
+                  child: Container(
+                    color: Colors.red,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

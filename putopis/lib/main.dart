@@ -31,18 +31,28 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
-          SizedBox(
-            height: 320,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Izdvojeno'),
-                Expanded(
-                  child: Container(
-                    color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SizedBox(
+              height: 320,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Izdvojeno',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
